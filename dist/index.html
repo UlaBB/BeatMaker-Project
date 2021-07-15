@@ -5,11 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>BeatMaker Project</title>
 </head>
 
 <body>
 
+    <div class="seqwencer">
+        <div class="kick-track">
+            <div class="controls">
+                <h1>Kick</h1>
+                <button data-track="0" class="mute kick-volumn">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="kick-select" id="kick-select">
+                    <option value="./sounds/clap-808.wav">Classic kick</option>
+                    <option value="./sounds/clap-analog.wav">Clap-analog</option>
+                    <option value="./sounds/clap-tape.wav">Clap-tape</option>
+                </select>
+            </div>
+            <div class="kick">
+                <div class="pad kick-pad b0"></div>
+                <div class="pad kick-pad b1"></div>
+                <div class="pad kick-pad b2"></div>
+                <div class="pad kick-pad b3"></div>
+                <div class="pad kick-pad b4"></div>
+                <div class="pad kick-pad b5"></div>
+                <div class="pad kick-pad b6"></div>
+                <div class="pad kick-pad b7"></div>
+            </div>
+        </div>
+        <div class="snare-track">
+            <div class="controls">
+                <h1>Snare</h1>
+                <button data-track="1" class="mute snare-volumn">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="snare-select" id="snare-select">
+                    <option value="./sounds/snare-808.wav">Snare classic</option>
+                    <option value="./sounds/snare-acoustic01.wav">Snare acoustic01</option>
+                    <option value="./sounds/snare-acoustic02.wav">Snare acoustic01</option>
+                </select>
+            </div>
+            <div class="snare">
+                <div class="pad snare-pad b0"></div>
+                <div class="pad snare-pad b1"></div>
+                <div class="pad snare-pad b2"></div>
+                <div class="pad snare-pad b3"></div>
+                <div class="pad snare-pad b4"></div>
+                <div class="pad snare-pad b5"></div>
+                <div class="pad snare-pad b6"></div>
+                <div class="pad snare-pad b7"></div>
+            </div>
+        </div>
+        <div class="crash-track">
+            <div class="controls">
+                <h1>Crash-track</h1>
+                <button data-track="2" class="mute crash-volumn">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="crash-select" id="crash-select">
+                    <option value="./sounds/crash-808.wav">Crash classic</option>
+                    <option value="./sounds/crash-acoustic.wav">Crash acoustic01</option>
+                    <option value="./sounds/crash-tape.wav">Crash acoustic01</option>
+                </select>
+            </div>
+            <div class="crash">
+                <div class="pad crash-pad b0"></div>
+                <div class="pad crash-pad b1"></div>
+                <div class="pad crash-pad b2"></div>
+                <div class="pad crash-pad b3"></div>
+                <div class="pad crash-pad b4"></div>
+                <div class="pad crash-pad b5"></div>
+                <div class="pad crash-pad b6"></div>
+                <div class="pad crash-pad b7"></div>
+            </div>
+        </div>
+    </div>
+    <button class="play">Play</button>
+    <audio class="clap-sound" src="./sounds/clap-808.wav"></audio>
+    <audio class="kick-sound" src="./sounds/snare-808.wav"></audio>
+    <audio class="crash-sound" src="./sounds/crash-808.wav"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
