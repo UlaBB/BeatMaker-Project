@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>BeatMaker Project</title>
 </head>
 
@@ -15,8 +16,8 @@
         <div class="kick-track">
             <div class="controls">
                 <h1>Kick</h1>
-                <button data-track="0" class="mute kick-volumn">
-                    <i class="fas fa-volume-mute"></i>
+                <button data-track="0" class="mute kick-volumn" type="button">
+                    <i class="fas fa-volume-mute">`</i>
                 </button>
                 <select name="kick-select" id="kick-select">
                     <option value="./sounds/clap-808.wav">Classic kick</option>
@@ -38,7 +39,7 @@
         <div class="snare-track">
             <div class="controls">
                 <h1>Snare</h1>
-                <button data-track="1" class="mute snare-volumn">
+                <button data-track="1" class="mute snare-volumn" type="button">
                     <i class="fas fa-volume-mute"></i>
                 </button>
                 <select name="snare-select" id="snare-select">
@@ -60,9 +61,9 @@
         </div>
         <div class="crash-track">
             <div class="controls">
-                <h1>Crash-track</h1>
-                <button data-track="2" class="mute crash-volumn">
-                    <i class="fas fa-volume-mute"></i>
+                <h1>Crash</h1>
+                <button data-track="2" class="mute crash-volumn" type="button">
+                    <i class="fas fa-volume-mute">`</i>
                 </button>
                 <select name="crash-select" id="crash-select">
                     <option value="./sounds/crash-808.wav">Crash classic</option>
@@ -82,14 +83,12 @@
             </div>
         </div>
     </div>
-    <button class="play">Play</button>
+    <button class="play" type="button">Play</button>
     <audio class="clap-sound" src="./sounds/clap-808.wav"></audio>
     <audio class="kick-sound" src="./sounds/snare-808.wav"></audio>
     <audio class="crash-sound" src="./sounds/crash-808.wav"></audio>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
-        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="./js/app.js"></script>
 </body>
 

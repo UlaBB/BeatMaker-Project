@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+i, svg{
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.crash-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad{
+  background: rgb(21, 112, 82);
+}
+
+.snare-pad{
+  background: rgb(112, 221, 22);
+}
+
+.crash-pad{
+  background: rgb(238, 216, 23);
+}
+
+.kick-track,
+.snare-track,
+.crash-track {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick,
+.snare,
+.crash{
+  display: flex;
+}
