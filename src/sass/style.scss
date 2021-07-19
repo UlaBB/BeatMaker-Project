@@ -1,14 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: sans-serif;
 }
 
-i, svg{
+i,
+svg {
   pointer-events: none;
 }
 
@@ -21,16 +22,28 @@ i, svg{
   cursor: pointer;
 }
 
-.kick-pad{
+.kick-pad {
   background: rgb(21, 112, 82);
 }
 
-.snare-pad{
+.snare-pad {
   background: rgb(112, 221, 22);
 }
 
-.crash-pad{
+.crash-pad {
   background: rgb(238, 216, 23);
+}
+
+.kick-pad.active {
+  background: rgb(23, 209, 147);
+}
+
+.snare-pad.active {
+  background: rgb(173, 247, 112);
+}
+
+.crash-pad.active {
+  background: rgb(255, 230, 0);
 }
 
 .kick-track,
@@ -45,6 +58,43 @@ i, svg{
 
 .kick,
 .snare,
-.crash{
+.crash {
   display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+  button {
+    padding: 1rem;
+    border: none;
+    background-color: rgb(62, 172, 62);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  background: grey;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 3rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
 }
