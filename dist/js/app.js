@@ -7,6 +7,7 @@ class DrumKit {
     this.crashAudio = document.querySelector('.crash-sound');
     this.index = 0;
     this.bpm = 150;
+    this.isPlaying = null;
   }
 
   activePad(){
@@ -40,9 +41,25 @@ class DrumKit {
 
   start(){
     const interval = (60/this.bpm)*1000;
-    setInterval(() => {
-      this.repeat();
-    }, interval);
+    //check if it's playing
+    if(this.isPlaying){
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+    } else{
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, interval);
+    }
+  }
+
+  updateBtn(){
+    if(!this.isPlaying){
+      this.playButton.innerText = 'Play';
+      this.playButton.classList.remove('active');
+    }else{
+      this.playButton.innerText = 'Stop';
+      this.playButton.classList.add('active');
+    }
   }
 }
 
@@ -53,11 +70,12 @@ console.log(drumKit);
 drumKit.pads.forEach(pad => {
   pad.addEventListener('click', drumKit.activePad);
   pad.addEventListener('animationend', function(){
-    this.style.animation = "";
+    this.style.animation = '';
   });
 });
 
 drumKit.playButton.addEventListener('click', function(){
   drumKit.start();
+  drumKit.updateBtn();
 });
 
