@@ -5,13 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,800;1,100;1,300;1,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>BeatMaker Project</title>
 </head>
 
 <body>
-
+<div class="beatmaker__background">
+    <header>
+        <h1><span>beat</span>maker</h1>
+    </header>
+<div class="beatmaker__menu">
+    <div class="buttons">
+        <button class="play" type="button">Play</button>
+        <div class="tempo">
+            <input type="range" class="tempo-slider" max="300" min="20" value="150">
+            <p>Tempo: <span class="tempo-nr">150</span></p>
+        </div>
+    </div>
+</div>
     <div class="seqwencer">
         <div class="kick-track">
             <div class="controls">
@@ -106,13 +121,7 @@
             </div>
         </div>
     </div>
-    <div class="buttons">
-        <button class="play" type="button">Play</button>
-        <div class="tempo">
-            <input type="range" class="tempo-slider" max="300" min="20" value="150">
-            <p>Tempo: <span class="tempo-nr">150</span></p>
-        </div>
-    </div>
+</div>
 
     <audio class="kick-sound" src="./sounds/kick-808.wav"></audio>
     <audio class="snare-sound" src="./sounds/snare-808.wav"></audio>
