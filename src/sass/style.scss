@@ -115,6 +115,35 @@ select {
   background: rgb(184, 182, 182);
 }
 
+.buttons {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+  p {
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+  }
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 80%;
+  position: relative;
+  background: rgb(126, 123, 123);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
 @keyframes playTrack {
   from {
     transform: scale(1);
