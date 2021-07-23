@@ -26,14 +26,70 @@ svg {
 header {
   color: #cdf0ea;
   text-align: center;
-  font-size: 35px;
-  margin-top: 35px;
+  font-size: 30px;
+  margin: 0 35px;
+
   h1 {
     font-weight: 200;
     letter-spacing: 25px;
     text-transform: uppercase;
+
     span {
       font-weight: bolder;
+    }
+  }
+}
+
+.beatmaker__menu {
+  height: 60px;
+  max-width: 800px;
+  background: #c9d8b6;
+  opacity: 0.5;
+  margin: 0 auto;
+
+  .buttons {
+    height: 60px;
+    background: #c9d8b6;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .play,
+    .clear {
+      height: 100%;
+      padding: 1rem 2rem;
+      background: #f1ecc3;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      i {
+        font-size: 25px;
+        color: #515e63;
+      }
+    }
+
+    .tempo {
+      margin: 1rem;
+      width: 30%;
+      display: flex;
+
+      .tempo-slider {
+        padding: 0.1rem;
+        -webkit-appearance: none;
+        margin: 1rem 0rem;
+        width: 90%;
+        position: relative;
+        background: #515e63;
+        cursor: pointer;
+        border-radius: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0.5rem;
+        text-align: center;
+      }
     }
   }
 }
@@ -120,16 +176,6 @@ header {
   transition: all 0.5s ease;
 }
 
-.play {
-  padding: 1rem 2rem;
-  background: grey;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin: 3rem;
-}
-
 select {
   padding: 1rem;
   font-size: 1rem;
@@ -138,36 +184,6 @@ select {
 
 .mute.active {
   background: rgb(184, 182, 182);
-}
-
-.buttons {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.tempo {
-  margin: 3rem;
-  width: 30%;
-
-  p {
-    font-size: 1.5rem;
-    margin: 2rem;
-    text-align: center;
-  }
-}
-
-.tempo-slider {
-  padding: 0.2rem;
-  -webkit-appearance: none;
-  margin: 1rem 0rem;
-  width: 80%;
-  position: relative;
-  background: rgb(126, 123, 123);
-  cursor: pointer;
-  border-radius: 1rem;
 }
 
 @keyframes playTrack {
