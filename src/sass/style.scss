@@ -27,7 +27,7 @@ header {
   color: #cdf0ea;
   text-align: center;
   font-size: 30px;
-  margin: 0 35px;
+  margin: 15px 0;
 
   h1 {
     font-weight: 200;
@@ -45,7 +45,7 @@ header {
   max-width: 800px;
   background: #c9d8b6;
   opacity: 0.5;
-  margin: 0 auto;
+  margin: 10px auto;
 
   .buttons {
     height: 60px;
@@ -63,6 +63,7 @@ header {
       border: none;
       font-size: 1.5rem;
       cursor: pointer;
+
       i {
         font-size: 25px;
         color: #515e63;
@@ -80,7 +81,7 @@ header {
         margin: 1rem 0rem;
         width: 90%;
         position: relative;
-        background: #515e63;
+        background: #a5a5a5;
         cursor: pointer;
         border-radius: 1rem;
       }
@@ -94,55 +95,85 @@ header {
   }
 }
 
+.seqwencer {
+  background: rgba(81, 94, 99, 0.5);
+  max-width: 800px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
 .kick-pad,
 .snare-pad,
 .crash-pad,
-.hihat-pad {
-  width: 5rem;
-  height: 5rem;
-  margin: 1rem 0.5rem;
+.hihat-pad,
+.tom-pad,
+.shaker-pad {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0.5rem 0.4rem;
   cursor: pointer;
 }
 
 .kick-pad {
-  background: rgb(21, 112, 82);
+  background: #ee9ca7;
 }
 
 .snare-pad {
-  background: rgb(112, 221, 22);
+  background: #de6262;
 }
 
 .crash-pad {
-  background: rgb(238, 216, 23);
+  background: #4e4376;
 }
 
 .hihat-pad {
-  background: rgb(128, 27, 89);
+  background: #00cdac;
+}
+
+.tom-pad {
+  background: #b06ab3;
+}
+
+.shaker-pad {
+  background: #4568dc;
 }
 
 .kick-pad.active {
-  background: rgb(23, 209, 147);
+  background: #ffdde1;
 }
 
 .snare-pad.active {
-  background: rgb(173, 247, 112);
+  background: #ffb88c;
 }
 
 .crash-pad.active {
-  background: rgb(255, 230, 0);
+  background: #8f7dcf;
 }
 
 .hihat-pad.active {
-  background: rgb(255, 0, 157);
+  background: #87f8e5;
+}
+
+.tom-pad.active {
+  background: #ecadee;
+}
+
+.tom-pad.active {
+  background: #7898ff;
 }
 
 .kick-track,
 .snare-track,
 .crash-track,
-.hihat-track {
+.hihat-track,
+.tom-track,
+.shaker-track {
   display: flex;
   align-items: center;
-  width: 80%;
+  //width: 80%;
   justify-content: space-between;
   //margin-top: 5rem;
 }
@@ -150,23 +181,34 @@ header {
 .kick,
 .snare,
 .crash,
-.hihat {
+.hihat,
+.tom,
+.shaker {
   display: flex;
+  margin-right: 15px;
 }
 
 .controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex: 1;
-  margin: 0rem 2rem;
+
+  h1 {
+    width: 50px;
+    font-size: 12px;
+    color: #ffff;
+    margin: 0 12px;
+    letter-spacing: 2px;
+  }
 
   button {
-    padding: 1rem;
+    padding: 0.5rem;
     border: none;
-    background-color: rgb(62, 172, 62);
+    background-color: none;
+    background: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.5s ease;
   }
@@ -177,9 +219,10 @@ header {
 }
 
 select {
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1rem;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  min-width: 180px;
 }
 
 .mute.active {

@@ -97,7 +97,7 @@ class DrumKit {
   }
 
   mute(e){
-   
+
     const muteIndex = e.target.getAttribute('data-track');
     e.target.classList.toggle('active');
     if(e.target.classList.contains('active')){

@@ -20,26 +20,26 @@
     </header>
 <div class="beatmaker__menu">
     <div class="buttons">
-        <button class="play" type="button"><i class="fas fa-play"></i></button>
+        <button class="play" type="button"><i class="fas fa-play">'</i></button>
         <div class="tempo">
             <input type="range" class="tempo-slider" max="300" min="20" value="150">
             <p>Tempo: <span class="tempo-nr">150</span></p>
         </div>
-        <button class="clear" type="button"><i class="far fa-times-circle"></i></button>
+        <button class="clear" type="button"><i class="far fa-times-circle">'</i></button>
     </div>
 </div>
     <div class="seqwencer">
         <div class="kick-track">
             <div class="controls">
                 <h1>Kick</h1>
-                <button data-track="0" class="mute kick-volumn" type="button">
-                    <i class="fas fa-volume-mute">`</i>
-                </button>
                 <select name="kick-select" id="kick-select">
                     <option value="./sounds/kick-808.wav">Classic kick</option>
                     <option value="./sounds/kick-acoustic01.wav">kick-acoustic01</option>
                     <option value="./sounds/kick-acoustic02.wav">kick-acoustic02</option>
                 </select>
+                <button data-track="0" class="mute kick-volumn" type="button">
+                    <i class="fas fa-volume-off"></i>
+                </button>
             </div>
             <div class="kick">
                 <div class="pad kick-pad b0"></div>
@@ -55,14 +55,14 @@
         <div class="snare-track">
             <div class="controls">
                 <h1>Snare</h1>
-                <button data-track="1" class="mute snare-volumn" type="button">
-                    <i class="fas fa-volume-mute">u</i>
-                </button>
                 <select name="snare-select" id="snare-select">
                     <option value="./sounds/snare-808.wav">Snare classic</option>
                     <option value="./sounds/snare-acoustic01.wav">Snare acoustic01</option>
                     <option value="./sounds/snare-acoustic02.wav">Snare acoustic01</option>
                 </select>
+                <button data-track="1" class="mute snare-volumn" type="button">
+                    <i class="fas fa-volume-off"></i>
+                </button>
             </div>
             <div class="snare">
                 <div class="pad snare-pad b0"></div>
@@ -78,14 +78,14 @@
         <div class="crash-track">
             <div class="controls">
                 <h1>Crash</h1>
-                <button data-track="2" class="mute crash-volumn" type="button">
-                    <i class="fas fa-volume-mute">`</i>
-                </button>
                 <select name="crash-select" id="crash-select">
                     <option value="./sounds/crash-808.wav">Crash classic</option>
                     <option value="./sounds/crash-acoustic.wav">Crash acoustic01</option>
                     <option value="./sounds/crash-tape.wav">Crash acoustic01</option>
                 </select>
+                <button data-track="2" class="mute crash-volumn" type="button">
+                    <i class="fas fa-volume-off"></i>
+                </button>
             </div>
             <div class="crash">
                 <div class="pad crash-pad b0"></div>
@@ -101,14 +101,14 @@
         <div class="hihat-track">
             <div class="controls">
                 <h1>Hihat</h1>
-                <button data-track="3" class="mute crash-volumn" type="button">
-                    <i class="fas fa-volume-mute">`</i>
-                </button>
                 <select name="hihat-select" id="hihat-select">
                     <option value="./sounds/hihat-808.wav">Hihat classic</option>
                     <option value="./sounds/hihat-acoustic01.wav">Hihat acoustic01</option>
                     <option value="./sounds/hihat-acoustic02.wav">Hihat acoustic01</option>
                 </select>
+                <button data-track="3" class="mute crash-volumn" type="button">
+                    <i class="fas fa-volume-off"></i>
+                </button>
             </div>
             <div class="crash">
                 <div class="pad hihat-pad b0"></div>
@@ -121,6 +121,52 @@
                 <div class="pad hihat-pad b7"></div>
             </div>
         </div>
+        <div class="tom-track">
+            <div class="controls">
+                <h1>Tom</h1>
+                <select name="tom-select" id="tom-select">
+                    <option value="./sounds/tom-808.wav">Tom classic</option>
+                    <option value="./sounds/tom-acoustic01.wav">Tom acoustic01</option>
+                    <option value="./sounds/tom-acoustic02.wav">Tom acoustic01</option>
+                </select>
+                <button data-track="3" class="mute crash-volumn" type="button">
+                    <i class="fas fa-volume-off"></i>
+                </button>
+            </div>
+            <div class="tom">
+                <div class="pad tom-pad b0"></div>
+                <div class="pad tom-pad b1"></div>
+                <div class="pad tom-pad b2"></div>
+                <div class="pad tom-pad b3"></div>
+                <div class="pad tom-pad b4"></div>
+                <div class="pad tom-pad b5"></div>
+                <div class="pad tom-pad b6"></div>
+                <div class="pad tom-pad b7"></div>
+            </div>
+        </div>
+        <div class="shaker-track">
+            <div class="controls">
+                <h1>Shaker</h1>
+                <select name="shaker-select" id="shaker-select">
+                    <option value="./sounds/shaker-analog.wav">Shaker classic</option>
+                    <option value="./sounds/shaker-shuffle.wav">Shaker acoustic01</option>
+                    <option value="./sounds/shaker-suckup.wav">Shaker acoustic01</option>
+                </select>
+                <button data-track="3" class="mute shaker-volumn" type="button">
+                    <i class="fas fa-volume-off"></i>
+                </button>
+            </div>
+            <div class="shaker">
+                <div class="pad shaker-pad b0"></div>
+                <div class="pad shaker-pad b1"></div>
+                <div class="pad shaker-pad b2"></div>
+                <div class="pad shaker-pad b3"></div>
+                <div class="pad shaker-pad b4"></div>
+                <div class="pad shaker-pad b5"></div>
+                <div class="pad shaker-pad b6"></div>
+                <div class="pad shaker-pad b7"></div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -128,6 +174,7 @@
     <audio class="snare-sound" src="./sounds/snare-808.wav"></audio>
     <audio class="crash-sound" src="./sounds/crash-808.wav"></audio>
     <audio class="hihat-sound" src="./sounds/hihat-808.wav"></audio>
+    <audio class="tom-sound" src="./sounds/tom-808.wav"></audio>
 
 
     <script src="./js/app.js"></script>
