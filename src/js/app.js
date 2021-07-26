@@ -9,12 +9,15 @@ class DrumKit {
     this.snareAudio = document.querySelector('.snare-sound');
     this.crashAudio = document.querySelector('.crash-sound');
     this.hihatAudio = document.querySelector('.hihat-sound');
+    this.tomAudio = document.querySelector('.tom-sound');
+    this.shakerAudio = document.querySelector('.shaker-sound');
     this.index = 0;
     this.bpm = 130;
     this.isPlaying = null;
     this.selects = document.querySelectorAll('select');
     this.muteBtns = document.querySelectorAll('.mute');
     this.tempoSlider = document.querySelector('.tempo-slider');
+    this.clearBeatBtn = document.querySelector('.clear');
   }
 
   activePad(){
@@ -43,6 +46,14 @@ class DrumKit {
         if (bar.classList.contains('hihat-pad')){
           this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
+        }
+        if (bar.classList.contains('tom-pad')){
+          this.tomAudio.currentTime = 0;
+          this.tomAudio.play();
+        }
+        if (bar.classList.contains('shaker-pad')){
+          this.shakerAudio.currentTime = 0;
+          this.shakerAudio.play();
         }
       }
     });
@@ -74,9 +85,7 @@ class DrumKit {
 
   changeSound(e){
     const selectionName = e.target.name;
-    
     const selectionValue = e.target.value;
-    
     switch(selectionName){
     case 'kick-select':
       this.kickAudio.src = selectionValue;
@@ -93,6 +102,14 @@ class DrumKit {
     case 'hihat-select':
       this.hihatAudio.src = selectionValue;
       break;
+
+    case 'tom-select':
+      this.tomAudio.src = selectionValue;
+      break;
+
+    case 'shaker-select':
+      this.shakerAudio.src = selectionValue;
+      break;
     }
   }
 
@@ -101,6 +118,7 @@ class DrumKit {
     const muteIndex = e.target.getAttribute('data-track');
     e.target.classList.toggle('active');
     if(e.target.classList.contains('active')){
+      e.target.innerHTML = '<i class="fas fa-volume-mute"></i>';
       switch(muteIndex){
       case '0':
         this.kickAudio.volume = 0;
@@ -117,8 +135,17 @@ class DrumKit {
       case '3':
         this.hihatAudio.volume = 0;
         break;
+
+      case '4':
+        this.tomAudio.volume = 0;
+        break;
+
+      case '5':
+        this.shakerAudio.volume = 0;
+        break;
       }
     }else{
+      e.target.innerHTML = '<i class="fas fa-volume-off"></i>';
       switch(muteIndex){
       case '0':
         this.kickAudio.volume = 1;
@@ -134,6 +161,14 @@ class DrumKit {
 
       case '3':
         this.hihatAudio.volume = 1;
+        break;
+
+      case '4':
+        this.tomAudio.volume = 1;
+        break;
+
+      case '5':
+        this.shakerAudio.volume = 1;
         break;
       }
     }
@@ -152,6 +187,15 @@ class DrumKit {
     if(this.playButton.classList.contains('active')){
       this.start();
     }
+  }
+
+  clearAll(){
+    const activePads = document.querySelectorAll('.pad.active');
+    console.log(activePads);
+    activePads.forEach(activePad =>{
+      activePad.classList.remove('active');
+    });
+    this.stopPlaying();
   }
 }
 
@@ -188,5 +232,9 @@ drumKit.tempoSlider.addEventListener('input', function(e){
 
 drumKit.tempoSlider.addEventListener('change', function(e){
   drumKit.updateTempo(e);
+});
+
+drumKit.clearBeatBtn.addEventListener('click', function(){
+  drumKit.clearAll();
 });
 
