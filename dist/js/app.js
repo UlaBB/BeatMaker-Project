@@ -1,5 +1,9 @@
 class DrumKit {
   constructor(){
+    this.getElements();
+  }
+
+  getElements(){
     this.pads = document.querySelectorAll('.pad');
     this.playButton = document.querySelector('.play');
     this.currentKick = './sounds/clap-808.wav';
@@ -68,7 +72,7 @@ class DrumKit {
       this.isPlaying = null;
     } else{
       this.isPlaying = setInterval(() => {
-        this.repeat();
+        this.repeat(8);
       }, interval);
     }
   }
@@ -191,11 +195,10 @@ class DrumKit {
 
   clearAll(){
     const activePads = document.querySelectorAll('.pad.active');
-    console.log(activePads);
     activePads.forEach(activePad =>{
       activePad.classList.remove('active');
     });
-    this.stopPlaying();
+    this.isPlaying = clearInterval(this.isPlaying);
   }
 }
 
