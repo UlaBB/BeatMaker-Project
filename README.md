@@ -1,4 +1,4 @@
 About project:
 
 Simply app to create music beats.
-<img src="./images/Design.jpg" alt="design">
+![alt text](https://i.postimg.cc/Nf3Dw7SW/Design.jpg)
