@@ -199,6 +199,11 @@ class DrumKit {
       activePad.classList.remove('active');
     });
     this.isPlaying = clearInterval(this.isPlaying);
+    const activeMuteBtns = document.querySelectorAll('.mute.active');
+    activeMuteBtns.forEach(activeMuteBtn => {
+      activeMuteBtn.classList.remove('active');
+      activeMuteBtn.innerHTML = '<i class="fas fa-volume-off"></i>';
+    });
   }
 }
 
