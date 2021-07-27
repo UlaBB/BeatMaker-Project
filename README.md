@@ -1,1 +1,3 @@
-version 2.3
+About project:
+
+Simply app to create music beats.
