@@ -31,4 +31,3 @@ Generate your own custom beat with Beatmaker.
 - Change the tempo.
 
 ![](https://github.com/UlaBB/BeatMaker-Project/blob/master/src/images/GitHub_Readme/BeatMaker_gitHub_3.gif)
-
