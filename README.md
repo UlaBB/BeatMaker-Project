@@ -2,7 +2,7 @@
 
 Simply app to create music beats.
 
-# 
+#
 
 # Technologies used
 
@@ -10,23 +10,19 @@ Simply app to create music beats.
 - SCSS
 - Javascript
 
-# 
+#
 
 # Features
 
 Generate your own custom beat with Beatmaker.
 
-# 
+#
 
 # Screen Shot
 
 - Select the sound and click play to hear your beat.
 
-
-
- ![alt-text](M:\FRON-END\JS VANILLA\BEATMAKER_PROJECT\src\images\GitHub_Readme\BeatMaker_gitHub_1.gif)
-
-![](M:\FRON-END\JS VANILLA\BEATMAKER_PROJECT\src\images\GitHub_Readme\BeatMaker_gitHub_1.gif)
+![](https://i.postimg.cc/Hn6Dwtgq/Beat-Maker-git-Hub-1.gif)
 
 - Mute or change the specified sound.
 
@@ -35,4 +31,3 @@ Generate your own custom beat with Beatmaker.
 - Change the tempo.
 
 ![](M:\FRON-END\JS VANILLA\BEATMAKER_PROJECT\src\images\GitHub_Readme\BeatMaker_gitHub_3.gif)
-
