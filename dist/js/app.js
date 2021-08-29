@@ -204,6 +204,7 @@ class DrumKit {
       activeMuteBtn.classList.remove('active');
       activeMuteBtn.innerHTML = '<i class="fas fa-volume-off"></i>';
     });
+    this.playButton.innerHTML = '<i class="fas fa-play"></i>';
   }
 }
 
